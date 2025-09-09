@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intake Form – Senior Spark Adventures</title>
+    <link rel="stylesheet" href="assets/style.css">
+<script src="assets/js/site.js"></script>
+</head>
+<body>
+    <header>
+  <div class="brand">
+      <a href="index.html" style="display:flex;align-items:center;gap:0.7rem;color:inherit;text-decoration:none;font-weight:inherit;">
+        <img src="assets/img/logo.png" alt="Senior Spark Adventures logo">
+        Senior Spark Adventures
+      </a>
+  </div>
+  <button id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="schedule.html">Schedule</a>
+    <a href="intake.html">Intake Form</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+    <section class="hero small-hero" style="background-image:url('assets/img/hero.png');">
+        <h1>Intake Form</h1>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <p>Help us serve you better by completing this form. Your responses will help us tailor our services to suit your preferences and needs.</p>
+            <form id="intakeForm" action="intake-success.html" method="POST">
+                <input type="hidden" name="form-name" value="intake">
+
+                <label for="name">Name *</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email address *</label>
+                <input type="email" id="email" name="email" required>
+
+                <label>What services are you interested in?</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="services" value="Everyday Errands"> Everyday Errands</label>
+                    <label><input type="checkbox" name="services" value="Games & Joy at home"> Games & Joy at home</label>
+                    <label><input type="checkbox" name="services" value="Meaningful Outings"> Meaningful Outings</label>
+                    <label><input type="checkbox" name="services" value="Technical Support"> Technical support</label>
+                    <label><input type="checkbox" name="services" value="Other"> Other</label>
+                </div>
+
+                <label for="transport">What is your preferred mode of transportation?</label>
+                <select id="transport" name="transport" required>
+                    <option value="" disabled selected>Select</option>
+                    <option value="Personal vehicle">Personal vehicle</option>
+                    <option value="Public transportation">Public transportation</option>
+                    <option value="Walking">Walking</option>
+                    <option value="Other">Other</option>
+                </select>
+
+                <label for="hobbies">Do you have any specific interests or hobbies?</label>
+                <textarea id="hobbies" name="hobbies" rows="3" placeholder="Tell us about your hobbies or interests"></textarea>
+
+                <label for="mobility">What level of mobility do you have?</label>
+                <select id="mobility" name="mobility" required>
+                    <option value="" disabled selected>Select</option>
+                    <option value="Full mobility">Full mobility</option>
+                    <option value="Limited mobility">Limited mobility</option>
+                    <option value="Require assistance">Require assistance</option>
+                </select>
+
+                <label for="health">Are there any health concerns or allergies we should be aware of?</label>
+                <textarea id="health" name="health" rows="3" placeholder="Please specify any health concerns or allergies"></textarea>
+
+                <label for="contact_method">What is your preferred contact method?</label>
+                <select id="contact_method" name="contact_method" required>
+                    <option value="" disabled selected>Select</option>
+                    <option value="Phone">Phone</option>
+                    <option value="Email">Email</option>
+                    <option value="Text message">Text message</option>
+                </select>
+
+                <label for="additional">Additional questions or comments</label>
+                <textarea id="additional" name="additional" rows="4" placeholder="Anything else you’d like us to know"></textarea>
+
+                <button type="submit" class="button">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer-flex">
+        <div class="footer-col">
+          <div class="footer-brand">
+            <img src="assets/img/logo.png" alt="Senior Spark Adventures logo">
+            <h3>Senior Spark Adventures</h3>
+          </div>
+          <p>📞 Call or Text: <a href="tel:+14165551234" style="color:#fff">(416) 555-1234</a></p>
+          <p>✉️ Email: <a href="mailto:info@seniorsparkadventures.ca" style="color:#fff">info@seniorsparkadventures.ca</a></p>
+        </div>
+    <div class="footer-col">
+      <h3>Quick links</h3>
+      <ul>
+        <li><a href="schedule.html">Schedule appointment</a></li>
+        <li><a href="intake.html">Complete intake</a></li>
+      </ul>
+    </div>
+  </div>
+  <p class="copyright">© <span id="year"></span> Senior Spark Adventures. All rights reserved.</p>
+</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="assets/js/email.js"></script>
+</body>
+</html>
