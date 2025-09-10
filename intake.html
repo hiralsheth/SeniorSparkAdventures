@@ -37,10 +37,13 @@
                 <input type="hidden" name="form-name" value="intake">
 
                 <label for="name">Name *</label>
-                <input type="text" id="name" name="name" required>
+                  <input type="text" id="name" name="name" required minlength="2" maxlength="50" pattern="^[A-Za-z .'-]+$" title="Please enter a valid name (letters and spaces only)">
 
-                <label for="email">Email address *</label>
-                <input type="email" id="email" name="email" required>
+                <label for="email">Email address</label>
+                  <input type="email" id="email" name="email" pattern="^[^@\s]+@[^@\s]+\.[^@\s]+$" maxlength="100" title="Please enter a valid email address">
+
+                  <label for="phone">Phone number *</label>
+                    <input type="tel" id="phone" name="phone" required pattern="^[0-9]{10}$" maxlength="10" title="Please enter a valid 10-digit phone number">
 
                 <label>What services are you interested in?</label>
                 <div class="checkbox-group">
@@ -61,7 +64,7 @@
                 </select>
 
                 <label for="hobbies">Do you have any specific interests or hobbies?</label>
-                <textarea id="hobbies" name="hobbies" rows="3" placeholder="Tell us about your hobbies or interests"></textarea>
+                  <textarea id="hobbies" name="hobbies" rows="3" maxlength="200" placeholder="Tell us about your hobbies or interests"></textarea>
 
                 <label for="mobility">What level of mobility do you have?</label>
                 <select id="mobility" name="mobility" required>
@@ -82,9 +85,9 @@
                     <option value="Text message">Text message</option>
                 </select>
 
-                <label for="additional">Additional questions or comments</label>
-                <textarea id="additional" name="additional" rows="4" placeholder="Anything else you’d like us to know"></textarea>
-
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" maxlength="300" placeholder="Anything else you’d like us to know"></textarea>
+                
                 <button type="submit" class="button">Submit</button>
             </form>
         </div>
@@ -97,8 +100,8 @@
             <img src="assets/img/logo.png" alt="Senior Spark Adventures logo">
             <h3>Senior Spark Adventures</h3>
           </div>
-          <p>📞 Call or Text: <a href="tel:+14165551234" style="color:#fff">(416) 555-1234</a></p>
-          <p>✉️ Email: <a href="mailto:info@seniorsparkadventures.ca" style="color:#fff">info@seniorsparkadventures.ca</a></p>
+          <p>📞 Call or Text: <a href="tel:+16475473917" style="color:#fff">(647) 547-3917</a></p>
+      <p>✉️ Email: <a href="mailto:seniorsparkadventures@gmail.com" style="color:#fff">seniorsparkadventures@gmail.com</a></p>
         </div>
     <div class="footer-col">
       <h3>Quick links</h3>

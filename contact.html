@@ -36,22 +36,23 @@
             <form id="contactForm" action="contact-success.html" method="POST">
                 <input type="hidden" name="form-name" value="contact">
 
-                <label for="name">Name *</label>
-                <input type="text" id="name" name="name" required>
 
-                <label for="email">Email address *</label>
-                <input type="email" id="email" name="email" required>
+  <label for="name">Name *</label>
+  <input type="text" id="name" name="name" required minlength="2" maxlength="50" pattern="^[A-Za-z .'-]+$" title="Please enter a valid name (letters and spaces only)">
 
-                <label for="phone">Phone number *</label>
-                <input type="tel" id="phone" name="phone" required>
+  <label for="email">Email address</label>
+  <input type="email" id="email" name="email" pattern="^[^@\s]+@[^@\s]+\.[^@\s]+$" maxlength="100" title="Please enter a valid email address">
 
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="5" placeholder="How can we help you?"></textarea>
+  <label for="phone">Phone number *</label>
+  <input type="tel" id="phone" name="phone" required pattern="^[0-9]{10}$" maxlength="10" title="Please enter a valid 10-digit phone number">
 
-                <label class="consent">
-                    <input type="checkbox" name="consent" required>
-                    I allow this website to store my submission so they can respond to my inquiry.
-                </label>
+  <label for="message">Message *</label>
+  <textarea id="message" name="message" rows="5" required maxlength="500" placeholder="How can we help you?" title="Message cannot exceed 500 characters"></textarea>
+
+        <label class="consent">
+          <input type="checkbox" name="consent" required>
+          I allow this website to store my submission so they can respond to my inquiry.
+        </label>
 
                 <button type="submit" class="button">Submit</button>
             </form>
@@ -65,8 +66,8 @@
             <img src="assets/img/logo.png" alt="Senior Spark Adventures logo">
             <h3>Senior Spark Adventures</h3>
           </div>
-          <p>📞 Call or Text: <a href="tel:+14165551234" style="color:#fff">(416) 555-1234</a></p>
-          <p>✉️ Email: <a href="mailto:info@seniorsparkadventures.ca" style="color:#fff">info@seniorsparkadventures.ca</a></p>
+          <p>📞 Call or Text: <a href="tel:+16475473917" style="color:#fff">(647) 547-3917</a></p>
+      <p>✉️ Email: <a href="mailto:seniorsparkadventures@gmail.com" style="color:#fff">seniorsparkadventures@gmail.com</a></p>
         </div>
     <div class="footer-col">
       <h3>Quick links</h3>

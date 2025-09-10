@@ -1,5 +1,5 @@
 // ===== EmailJS IDs (yours) =====
-const EMAILJS_PUBLIC_KEY     = "ytWsQJdyOyJyNqUqq";
+const EMAILJS_PUBLIC_KEY     = "ytWsQJdyOvJyNqUqq";
 const EMAILJS_SERVICE_ID     = "service_p807od6";
 const TEMPLATE_SCHEDULE_ID   = "template_oe7f4tk";   // dedicated schedule template
 const TEMPLATE_UNIVERSAL_ID  = "template_oswliqt";   // used for Contact + Intake
@@ -52,6 +52,7 @@ function bindUniversal(id, typeLabel){
     const { subject, greeting, summary } = buildUniversalPayload(id, typeLabel, obj);
 
     const payload = {
+      ...obj, // includes all form fields: name, email, phone, etc.
       subject,
       greeting,
       summary,
