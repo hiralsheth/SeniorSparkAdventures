@@ -1,64 +1,91 @@
 # Senior Spark Adventures
 
-A warm, senior-focused companion service website built as a static multi-page site.
+A warm, senior-focused companion service website built with HTML, CSS, and JavaScript and published as a GitHub Pages site.
 
-## About the project
-Senior Spark Adventures is designed to help seniors stay connected, confident, and supported through:
-- Meaningful outings in the community
-- Everyday errands and appointment support
+## Live site
+
+[https://hiralsheth.github.io/SeniorSparkAdventures/](https://hiralsheth.github.io/SeniorSparkAdventures/)
+
+## About this project
+
+Senior Spark Adventures is designed to help seniors stay connected, confident, and supported through meaningful everyday experiences. The site introduces the service offering, shares the mission and values behind the brand, and provides simple ways for visitors to get in touch, request a schedule, or complete an intake form.
+
+## What the website offers
+
+- Heartfelt companionship and one-on-one support for seniors
+- Meaningful outings in the community (parks, cafés, libraries, places of worship)
+- Help with everyday errands (grocery shopping, pharmacy, banking)
 - Games, conversation, and joy at home
-- Friendly technical support for modern devices
-- Contact, intake, and appointment scheduling forms
-
-The site uses a calm, welcoming visual style with a focus on accessibility, simple navigation, and clear calls to action.
+- Friendly technical support for modern devices (smartphones, tablets, smart TVs)
+- Contact, scheduling, and intake forms powered by EmailJS
 
 ## Tech stack
+
 - HTML
 - CSS
 - JavaScript
-- Static hosting / GitHub Pages
+- [EmailJS](https://www.emailjs.com/) for form submissions
+- GitHub Pages for hosting
 
-## Project structure
-- `index.html` — homepage
-- `about.html` — mission, vision, and values
-- `services.html` — service overview
-- `schedule.html` — appointment request form
-- `intake.html` — intake form
-- `contact.html` — contact form
-- `assets/style.css` — site styles
-- `assets/js/` — client-side scripts
-- `assets/img/` — images and logo assets
+## Site structure
 
-## How to run locally
-1. Clone the repository.
-2. Open `index.html` in your browser, or use a local static server.
-3. Update links, images, and form handlers as needed.
+| File | Description |
+|------|-------------|
+| `index.html` | Homepage |
+| `about.html` | Mission, story, and values |
+| `services.html` | Service overview |
+| `meaningful-outings.html` | Outing service detail page |
+| `everyday-errands.html` | Errands service detail page |
+| `games-joy-at-home.html` | At-home engagement detail page |
+| `technical-support.html` | Tech support detail page |
+| `schedule.html` | Appointment request form |
+| `intake.html` | Intake form |
+| `contact.html` | Contact form |
+| `schedule-success.html` | Schedule confirmation page |
+| `intake-success.html` | Intake confirmation page |
+| `contact-success.html` | Contact confirmation page |
+| `summary.html` | Summary/handout-style page |
+| `404.html` | Custom not-found page |
+| `assets/style.css` | Main stylesheet |
+| `assets/js/site.js` | Shared UI behaviour (nav, form validation) |
+| `assets/js/email.js` | EmailJS form submission handler |
+| `assets/img/` | Images and logo assets |
 
-Example with Python:
+## Running locally
+
+You can open the site directly in a browser, or use a local static server to avoid any path issues.
+
 ```bash
 python -m http.server 8000
 ```
-Then open `http://localhost:8000`.
 
-## Features
+Then visit: [http://localhost:8000](http://localhost:8000)
+
+## GitHub Pages deployment
+
+This is a static site and deploys automatically via GitHub Actions when changes are pushed to `main`.
+
+To set up GitHub Pages manually:
+1. Go to **Settings → Pages** in this repository.
+2. Under **Source**, select the `main` branch and the root folder.
+3. Save and wait for GitHub to build and publish the site.
+
+## Key features
+
 - Responsive layout for desktop and mobile
-- Friendly branding and consistent design system
-- Service cards and content sections
-- Appointment scheduling and intake forms
-- Email/contact-oriented call to actions
-- GitHub Pages compatible structure
+- Consistent shared header and navigation across all pages
+- Active-link highlighting driven by `assets/js/site.js`
+- Mobile nav toggle with accessible `aria-expanded` state
+- EmailJS-powered contact, intake, and schedule forms
+- Open Graph and Twitter Card metadata on every page
+- Custom 404 page matching the site branding
+- Favicon set and theme colour meta tag
 
 ## Suggested improvements
-1. Add form validation and submission feedback with success/error states.
-2. Connect forms to a real backend or a form provider so submissions are reliably stored.
-3. Improve accessibility with skip links, better focus styles, and form help text.
-4. Add SEO improvements such as meta descriptions, Open Graph tags, and structured data.
-5. Remove duplicated CSS rules and split large stylesheet sections into smaller modules.
-6. Add a responsive mobile menu animation and active navigation state handling in JavaScript.
-7. Create a reusable shared header/footer so content stays consistent across pages.
-8. Add a privacy policy and consent details for form submissions.
-9. Include a 404 page and a success/confirmation page for forms.
-10. Add automated checks for broken links and basic HTML/CSS validation.
 
-## Notes
-This project is already visually polished, but it would benefit most from stronger form handling, accessibility refinements, and a bit of code cleanup.
+1. **Improve accessibility** – add a visible skip link, ensure keyboard-accessible nav, and check heading order.
+2. **Strengthen form handling** – show inline validation messages instead of browser alerts; add loading and error states.
+3. **Add trust and compliance pages** – privacy policy, terms of service, and form consent explanation.
+4. **Structured data** – add JSON-LD `LocalBusiness` markup for better search engine rich results.
+5. **Image optimisation** – compress hero and service images; add explicit `width` and `height` attributes.
+6. **Automated checks** – broken-link validation and basic HTML/CSS linting in CI.

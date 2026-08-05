@@ -516,27 +516,6 @@ input[type="checkbox"] {
     color: var(--heading);
 }
 
-.service-pills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.7rem;
-    margin-top: 1rem;
-}
-
-.service-pills span {
-    background: var(--white);
-    color: var(--heading);
-    padding: 0.6rem 0.9rem;
-    border-radius: 999px;
-    font-weight: 700;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
-}
-
-.summary-cta {
-    text-align: center;
-    max-width: 800px;
-}
-
 /* Responsive adjustments */
 @media (max-width: 600px) {
     .hero h1 {
@@ -565,6 +544,7 @@ input[type="checkbox"] {
 header{position:sticky;top:0;z-index:20;gap:1rem}
 header .brand{display:flex;align-items:center;gap:0.9rem;font-weight:800;font-size:1.7rem;}
 header .brand img{height:44px;width:auto;border-radius:8px;background:rgba(255,255,255,0.85);padding:1px}
+header .brand-link{display:flex;align-items:center;gap:0.7rem;color:inherit;text-decoration:none;font-weight:inherit;}
 #nav-toggle{display:none;background:transparent;border:none;color:#fff;font-size:1.8rem;padding:.2rem .4rem;cursor:pointer;}
 header nav{display:flex;gap:1rem;align-items:center;}
 header nav a{white-space:nowrap;}
