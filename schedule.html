@@ -1,11 +1,14 @@
+---
+permalink: /schedule/
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Schedule appointment – Senior Spark Adventures</title>
-    <link rel="stylesheet" href="assets/style.css">
-<script src="assets/js/site.js"></script>
+    <link rel="stylesheet" href="/assets/style.css">
+<script src="/assets/js/site.js"></script>
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
@@ -15,41 +18,42 @@
 <meta property="og:title" content="Schedule an Appointment – Senior Spark Adventures">
 <meta property="og:description" content="Request a companion appointment with Senior Spark Adventures. Fill out the simple form and we will be in touch to confirm your visit.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://hiralsheth.github.io/SeniorSparkAdventures/schedule.html">
-<meta property="og:image" content="https://hiralsheth.github.io/SeniorSparkAdventures/android-chrome-192x192.png">
+<meta property="og:url" content="https://seniorsparkadventures.com/schedule/">
+<meta property="og:image" content="https://seniorsparkadventures.com/android-chrome-192x192.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Schedule an Appointment – Senior Spark Adventures">
 <meta name="twitter:description" content="Request a companion appointment with Senior Spark Adventures. Fill out the simple form and we will be in touch to confirm your visit.">
-<meta name="twitter:image" content="https://hiralsheth.github.io/SeniorSparkAdventures/android-chrome-192x192.png">
-<link rel="canonical" href="https://hiralsheth.github.io/SeniorSparkAdventures/schedule.html">
+<meta name="twitter:image" content="https://seniorsparkadventures.com/android-chrome-192x192.png">
+<link rel="canonical" href="https://seniorsparkadventures.com/schedule/">
 </head>
 <body>
     <header>
   <div class="brand">
-      <a href="index.html" class="brand-link">
-        <img src="assets/img/logo.png" alt="Senior Spark Adventures logo">
+      <a href="/" class="brand-link">
+        <img src="/assets/img/logo.png" alt="Senior Spark Adventures logo">
         Senior Spark Adventures
       </a>
   </div>
   <button id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
   <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
-    <a href="schedule.html">Schedule</a>
-    <a href="intake.html">Intake Form</a>
-    <a href="contact.html">Contact</a>
+    <a href="/">Home</a>
+    <a href="/about/">About</a>
+    <a href="/services/">Services</a>
+    <a href="/schedule/">Schedule</a>
+    <a href="/intake/">Intake Form</a>
+    <a href="/contact/">Contact</a>
   </nav>
 </header>
 
-    <section class="hero small-hero" style="background-image:url('assets/img/hero.png');">
+  <main id="main-content">
+    <section class="hero small-hero" style="background-image:url('/assets/img/hero.png');">
         <h1>Schedule an appointment</h1>
     </section>
 
     <section class="section">
         <div class="container">
             <p>Please use the form below to request a meeting. We’ll get back to you as soon as possible to confirm your appointment.</p>
-            <form id="scheduleForm" action="schedule-success.html" method="POST">
+            <form id="scheduleForm" action="/schedule-success/" method="POST">
                 <!-- Hidden form name for Netlify or other processors if needed -->
                 <input type="hidden" name="form-name" value="schedule">
 
@@ -85,21 +89,23 @@
         </div>
     </section>
 
+    </main>
+
     <footer class="footer">
       <div class="container footer-flex">
         <div class="footer-col">
           <div class="footer-brand">
-            <img src="assets/img/logo.png" alt="Senior Spark Adventures logo">
+            <img src="/assets/img/logo.png" alt="Senior Spark Adventures logo">
             <h3>Senior Spark Adventures</h3>
           </div>
-          <p>📞 Call or Text: <a href="tel:+16475473917" style="color:#fff">(647) 547-3917</a></p>
+          <p>📞 Call or Text: <a href="tel:+16475470785" style="color:#fff">+1 (647) 547-0785</a></p>
       <p>✉️ Email: <a href="mailto:seniorsparkadventures@gmail.com" style="color:#fff">seniorsparkadventures@gmail.com</a></p>
         </div>
     <div class="footer-col">
       <h3>Quick links</h3>
       <ul>
-        <li><a href="schedule.html">Schedule appointment</a></li>
-        <li><a href="intake.html">Complete intake</a></li>
+        <li><a href="/schedule/">Schedule appointment</a></li>
+        <li><a href="/intake/">Complete intake</a></li>
       </ul>
     </div>
   </div>
@@ -108,6 +114,6 @@
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
     <!-- EmailJS library and custom script for sending emails -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script src="assets/js/email.js"></script>
+    <script src="/assets/js/email.js"></script>
 </body>
 </html>

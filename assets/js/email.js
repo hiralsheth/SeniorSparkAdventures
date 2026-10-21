@@ -35,7 +35,7 @@ function bindSchedule(id){
     } catch(err){
       console.warn('EmailJS error (schedule)', err);
     }
-    window.location.href = 'schedule-success.html';
+    window.location.href = '/schedule-success/';
   });
 }
 
@@ -69,7 +69,7 @@ function bindUniversal(id, typeLabel){
     } catch(err){
       console.warn('EmailJS error (universal)', err);
     }
-    window.location.href = (id === 'intakeForm') ? 'intake-success.html' : 'contact-success.html';
+    window.location.href = (id === 'intakeForm') ? '/intake-success/' : '/contact-success/';
   });
 }
 

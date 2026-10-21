@@ -8,9 +8,9 @@
       toggle.setAttribute('aria-expanded', nav.classList.contains('open') ? 'true' : 'false');
     });
   }
-  const path = location.pathname.split('/').pop() || 'index.html';
+  const path = location.pathname.replace(/\/$/, '') || '/';
   document.querySelectorAll('header nav a').forEach(a => {
-    const target = a.getAttribute('href');
+    const target = a.getAttribute('href').replace(/\/$/, '') || '/';
     if (target === path) a.classList.add('active');
   });
 

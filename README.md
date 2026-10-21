@@ -1,10 +1,10 @@
 # Senior Spark Adventures
 
-A warm, senior-focused companion service website built with HTML, CSS, and JavaScript and published as a GitHub Pages site.
+A warm, senior-focused companion service website built with HTML, CSS, and JavaScript and published on GitHub Pages with the custom domain.
 
 ## Live site
 
-[https://hiralsheth.github.io/SeniorSparkAdventures/](https://hiralsheth.github.io/SeniorSparkAdventures/)
+[https://seniorsparkadventures.com/](https://seniorsparkadventures.com/)
 
 ## About this project
 
@@ -29,51 +29,43 @@ Senior Spark Adventures is designed to help seniors stay connected, confident, a
 
 ## Site structure
 
-| File | Description |
-|------|-------------|
-| `index.html` | Homepage |
-| `about.html` | Mission, story, and values |
-| `services.html` | Service overview |
-| `meaningful-outings.html` | Outing service detail page |
-| `everyday-errands.html` | Errands service detail page |
-| `games-joy-at-home.html` | At-home engagement detail page |
-| `technical-support.html` | Tech support detail page |
-| `schedule.html` | Appointment request form |
-| `intake.html` | Intake form |
-| `contact.html` | Contact form |
-| `schedule-success.html` | Schedule confirmation page |
-| `intake-success.html` | Intake confirmation page |
-| `contact-success.html` | Contact confirmation page |
-| `summary.html` | Summary/handout-style page |
-| `404.html` | Custom not-found page |
+| Source file | Public URL | Description |
+|-------------|------------|-------------|
+| `index.html` | `/` | Homepage |
+| `about.html` | `/about/` | Mission, story, and values |
+| `services.html` | `/services/` | Service overview |
+| `meaningful-outings.html` | `/meaningful-outings/` | Outing service detail page |
+| `everyday-errands.html` | `/everyday-errands/` | Errands service detail page |
+| `games-joy-at-home.html` | `/games-joy-at-home/` | At-home engagement detail page |
+| `technical-support.html` | `/technical-support/` | Tech support detail page |
+| `schedule.html` | `/schedule/` | Appointment request form |
+| `intake.html` | `/intake/` | Intake form |
+| `contact.html` | `/contact/` | Contact form |
+| `schedule-success.html` | `/schedule-success/` | Schedule confirmation page |
+| `intake-success.html` | `/intake-success/` | Intake confirmation page |
+| `contact-success.html` | `/contact-success/` | Contact confirmation page |
+| `summary.html` | `/summary/` | Summary/handout-style page |
+| `404.html` | `/404.html` | Custom not-found page |
 | `assets/style.css` | Main stylesheet |
 | `assets/js/site.js` | Shared UI behaviour (nav, form validation) |
 | `assets/js/email.js` | EmailJS form submission handler |
 | `assets/img/` | Images and logo assets |
 
-## Running locally
+## Previewing changes
 
-You can open the site directly in a browser, or use a local static server to avoid any path issues.
-
-```bash
-python -m http.server 8000
-```
-
-Then visit: [http://localhost:8000](http://localhost:8000)
+Clean routes are generated during the Jekyll build in the GitHub Actions workflow. A plain static server does not generate those routes from the source `.html` files, so preview the deployed GitHub Pages site to test navigation and clean URLs.
 
 ## GitHub Pages deployment
 
-This is a static site and deploys automatically via GitHub Actions when changes are pushed to `main`.
+This is a static site. GitHub Actions builds the source pages with Jekyll, which publishes each page at its clean permalink, when changes are pushed to `main`.
 
-To set up GitHub Pages manually:
-1. Go to **Settings → Pages** in this repository.
-2. Under **Source**, select the `main` branch and the root folder.
-3. Save and wait for GitHub to build and publish the site.
+GitHub Pages must use **Settings → Pages → Build and deployment → Source: GitHub Actions**. The workflow builds the Jekyll permalinks and deploys the generated `_site` directory.
 
 ## Key features
 
 - Responsive layout for desktop and mobile
 - Consistent shared header and navigation across all pages
+- Clean directory-style page URLs (for example, `/contact/`)
 - Active-link highlighting driven by `assets/js/site.js`
 - Mobile nav toggle with accessible `aria-expanded` state
 - EmailJS-powered contact, intake, and schedule forms
