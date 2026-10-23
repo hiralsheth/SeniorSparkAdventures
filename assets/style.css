@@ -934,6 +934,15 @@ input[type="checkbox"] {
     line-height: 1.75;
 }
 
+.home-service-area {
+    max-width: 540px;
+    margin: 0.7rem 0 0;
+    color: var(--forest);
+    font-size: 0.96rem;
+    font-weight: 700;
+    line-height: 1.6;
+}
+
 .home-hero-actions {
     display: flex;
     flex-wrap: wrap;
@@ -944,6 +953,21 @@ input[type="checkbox"] {
 
 .home-hero-actions .btn {
     margin-top: 0;
+}
+
+.home-meet-greet {
+    flex: 0 1 auto;
+    min-width: 0;
+}
+
+.home-meet-greet .btn {
+    max-width: 100%;
+}
+
+.home-meet-greet p {
+    margin: 0.55rem 0 0;
+    color: #4e5c53;
+    font-size: 0.9rem;
 }
 
 .home-text-link {
@@ -1047,22 +1071,44 @@ input[type="checkbox"] {
     margin-top: 2.5rem;
 }
 
-.home-next-step {
-    background: #eaf0e8;
+.home-review-offer {
+    background: #f6f5ed;
 }
 
-.home-next-step-inner {
-    max-width: 760px;
+.home-review-offer-inner {
+    display: grid;
+    grid-template-columns: 1fr 0.9fr;
+    align-items: center;
+    gap: clamp(2rem, 7vw, 6rem);
 }
 
-.home-next-step h2 {
+.home-review-offer-intro h2 {
+    max-width: 620px;
+    margin: 0;
+    color: var(--forest);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.15;
+}
+
+.home-review-offer-intro > p:last-child,
+.home-review-offer-details p {
+    color: #4e5c53;
+    line-height: 1.75;
+}
+
+.home-review-offer-details {
+    padding-left: 1.5rem;
+    border-left: 3px solid #c6a66b;
+}
+
+.home-review-offer-details p:first-child {
     margin-top: 0;
 }
 
-.home-next-step-inner > p:not(.home-eyebrow) {
-    max-width: 640px;
-    color: #4e5c53;
-    font-size: 1.08rem;
+.home-review-offer-details .home-text-link {
+    display: inline-block;
+    margin-top: 0.35rem;
 }
 
 .home-contact {
@@ -1112,6 +1158,15 @@ input[type="checkbox"] {
 
     .home-trust {
         margin-top: 1rem;
+    }
+
+    .home-review-offer-inner {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+
+    .home-review-offer-details {
+        padding-left: 1.25rem;
     }
 
     .hero:not(.home-hero) {
