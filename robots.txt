@@ -1,0 +1,15 @@
+User-agent: *
+Disallow: /intake/
+Disallow: /schedule/
+Disallow: /intake-success/
+Disallow: /schedule-success/
+Disallow: /contact-success/
+
+User-agent: OAI-SearchBot
+Disallow: /intake/
+Disallow: /schedule/
+Disallow: /intake-success/
+Disallow: /schedule-success/
+Disallow: /contact-success/
+
+Sitemap: https://seniorsparkadventures.com/sitemap.xml
